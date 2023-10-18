@@ -9,19 +9,19 @@ export const Home = () => {
           <div className='flex items-start sm:items-center h-full sm:w-1/2 sm:bg-center'>
             <div className='flex flex-col gap-2 max-w-[70sch] text-center sm:text-left text-xl font-medium md:text-2xl lg:text-3xl'>
               <div>
-                <h1>Template dApp</h1>
+                <h1> </h1>
                 <p className='text-gray-400'>
                   The{' '}
                   <a
-                    href='https://www.npmjs.com/package/@multiversx/sdk-dapp'
+                    href='http://xartists.webflow.io'
                     target='_blank'
                     className='text-gray-400 underline decoration-dotted hover:decoration-solid'
                   >
-                    sdk-dapp
+                    xArtists
                   </a>{' '}
-                  starter project for any dApp{' '}
+                  Dapp coming soon.. {' '}
                   <br className='hidden xl:block' />
-                  built on the{' '}
+                  {' '}
                   <a
                     href='https://multiversx.com/'
                     target='_blank'
