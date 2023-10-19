@@ -1,0 +1,8 @@
+/* custom-background.css */
+.custom-background {
+  background-image: url('back1.gif');
+  background-size: cover;
+
+  
+  /* Ajoutez d'autres propriétés CSS personnalisées au besoin */
+}

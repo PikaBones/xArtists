@@ -16,7 +16,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
           routes={routes}
           unlockRoute={`${RouteNamesEnum.unlock}${search}`}
         >
-          {children}
+          {children}  
         </AuthenticatedRoutesWrapper>
       </main>
       <Footer />
