@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Staking from './pages/Staking/Staking';
+
 
 import {
   AxiosInterceptorContext, // using this is optional
@@ -56,6 +58,7 @@ const AppContent = () => {
           <NotificationModal />
           <SignTransactionsModals />
           <Routes>
+          <Route path='/staking' element={<Staking />} />
             <Route path={RouteNamesEnum.unlock} element={<Unlock />} />
             {routes.map((route) => (
               <Route
@@ -64,6 +67,7 @@ const AppContent = () => {
                 element={<route.component />}
               />
             ))}
+            <Route path='/staking' element={<Staking/>} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </Layout>

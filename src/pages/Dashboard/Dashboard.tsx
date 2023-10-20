@@ -1,6 +1,7 @@
 import { Card } from 'components/Card';
 import { contractAddress } from 'config';
 import { AuthRedirectWrapper } from 'wrappers';
+
 import {
   Account,
   PingPongAbi,
