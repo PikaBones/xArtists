@@ -26,9 +26,11 @@ export const Header = () => {
         <MultiversXLogo className='w-full h-6' />
       </MxLink>
       {isLoggedIn && (
-        <MxLink to="/staking">
+        <><MxLink to="/staking">
           Staking
-        </MxLink>
+        </MxLink><MxLink to="/dashboard">Dashboard</MxLink></>
+        
+        
       )}
 
       <nav className='h-full w-full text-sm sm:relative sm:left-auto sm:top-auto sm:flex sm:w-auto sm:flex-row sm:justify-end sm:bg-transparent'>

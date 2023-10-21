@@ -31,11 +31,11 @@ function Staking() {
   };
 
   return (
-    <div className='flex flex-col h-screen justify-center items-start mt-5'>
-      <div className='flex flex-1 justify-center items-center bg-transparent'>
-        <div className='flex flex-col gap-2 max-w-[70sch] text-center sm:text-left text-xl font-medium md:text-2xl lg:text-3xl text-white'>
+    <div className='flex flex-col h-screen justify-center items-start mt-0'>
+      <div className='flex flex-1 justify-center items-center bg-transparent my-150'>
+        <div className='flex flex-col gap-2 max-w-[70sch] text-center sm:text-left text-xl font-medium md:text-2xl lg:text-3xl text-white my-0'>
           <div>
-            <h1>Staking Pool:</h1>
+            <h1>Check wallet stack:</h1>
             <input
               type='text'
               placeholder='Wallet adresse erd111...'
@@ -44,14 +44,14 @@ function Staking() {
               className='text-black border rounded-md p-2 w-full'
             />
             <p>{scriptOutput}</p>
-            <button onClick={executeScript} className='bg-blue-500 text-white rounded-md p-2'>
-              Check wallet
+            <button onClick={executeScript} className='bg-blue-500 text-white rounded-md p-2 my-0'>
+              Track wallet
             </button>
           </div>
         </div>
         <img src={logo} alt='xArtistsLogo' className='w-64 h-64' />
       </div>
-      <div className='w-full text-center bg-blue-500 text-white p-4'>
+      <div className='w-full text-center bg-blue-500 text-white p-4 mt'>
         TEST ICI
       </div>
       <div className='w-full text-center bg-gray-200 p-4'>
