@@ -59,6 +59,7 @@ const AppContent = () => {
           <SignTransactionsModals />
           <Routes>
           <Route path='/staking' element={<Staking />} />
+          
             <Route path={RouteNamesEnum.unlock} element={<Unlock />} />
             {routes.map((route) => (
               <Route

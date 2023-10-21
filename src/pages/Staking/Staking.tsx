@@ -1,42 +1,33 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { AuthRedirectWrapper } from 'wrappers';
-import { RouteNamesEnum } from 'localConstants';
+import React, { ChangeEvent, useState } from 'react';
 
 function Staking() {
   const [scriptOutput, setScriptOutput] = useState('');
-  const [argument, setArgument] = useState(''); // Ajoutez un état pour stocker l'entrée utilisateur
+  const [argument, setArgument] = useState('');
 
-  const logo = '/xlogo.png'; // Remplacez par le chemin de votre logo
+  const logo = '/xlogo.png';
 
-  function handleArgumentChange(event: ChangeEvent<HTMLInputElement>): void {
+  const handleArgumentChange = (event: ChangeEvent<HTMLInputElement>) => {
     setArgument(event.target.value);
-  }
+  };
 
-  const executeScript = async () => {
+  const executeScript = () => {
     if (!argument) {
       alert("Veuillez saisir une adresse de portefeuille ERD.");
       return;
     }
 
-    try {
-      // Remplacez '/votre-backend-url' par l'URL de votre backend où vous exécutez le script Bash
-      const response = await fetch('/staking', {
-        method: 'POST',
-        body: JSON.stringify({ argument }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+    fetch('http://localhost:3001/execute-script', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ argument }),
+    })
+      .then((response) => response.text())
+      .then((data) => setScriptOutput(data))
+      .catch((error) => {
+        console.error("Erreur lors de l'exécution du script Bash :", error);
       });
-
-      if (response.ok) {
-        const data = await response.text();
-        setScriptOutput(data);
-      } else {
-        console.error("Erreur lors de l'exécution du script Bash.");
-      }
-    } catch (error) {
-      console.error("Erreur lors de l'exécution du script Bash :", error);
-    }
   };
 
   return (
@@ -47,7 +38,7 @@ function Staking() {
             <h1>Staking Pool:</h1>
             <input
               type='text'
-              placeholder='Wallet addresse erd111...'
+              placeholder='Wallet adresse erd111...'
               value={argument}
               onChange={handleArgumentChange}
               className='text-black border rounded-md p-2 w-full'
