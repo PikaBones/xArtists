@@ -10,8 +10,8 @@ export const Account = () => {
 
   return (
     <OutputContainer>
-      <div className='flex flex-col text-black' data-testid='topInfo'>
-        <p className='truncate'>
+      <div className='flex flex-col text-white mt-0' data-testid='topInfo'>
+        <p className='truncate mt-0'>
           <Label>Address: </Label>
           <span data-testid='accountAddress'> {address}</span>
         </p>

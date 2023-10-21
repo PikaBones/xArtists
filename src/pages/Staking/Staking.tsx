@@ -1,3 +1,4 @@
+import { Account } from 'pages/Dashboard/widgets';
 import React, { ChangeEvent, useState } from 'react';
 
 function Staking() {
@@ -35,6 +36,7 @@ function Staking() {
       <div className='flex flex-1 justify-center items-center bg-transparent my-150'>
         <div className='flex flex-col gap-2 max-w-[70sch] text-center sm:text-left text-xl font-medium md:text-2xl lg:text-3xl text-white my-0'>
           <div>
+          <Account></Account>
             <h1>Check wallet stack:</h1>
             <input
               type='text'
@@ -50,9 +52,6 @@ function Staking() {
           </div>
         </div>
         <img src={logo} alt='xArtistsLogo' className='w-64 h-64' />
-      </div>
-      <div className='w-full text-center bg-blue-500 text-white p-4 mt'>
-        TEST ICI
       </div>
       <div className='w-full text-center bg-gray-200 p-4'>
         <p>Autres informations ici</p>
