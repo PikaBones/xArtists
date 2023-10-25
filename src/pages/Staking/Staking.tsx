@@ -64,16 +64,17 @@ function Staking() {
         <div className='flex flex-1 justify-center items-center bg-transparent mt-20'>
           <div className='flex flex-col gap-2 max-w-[70sch] text-center sm:text-left text-xl font-medium md:text-2xl lg:text-3xl text-white my-0'>
             <Account />
-            <div className='mt-4'>
-              <h1>Your wallet total stack: </h1>
+            <h1>Your wallet total stack: </h1>
               <p>{scriptOutput}eGld</p>
-              <h2>Stakeur:</h2>
-              <p>{stakedScriptOutput}</p> {/* Affichez la sortie du script staked.sh ici */}
-            </div>
           </div>
           <img src={logo} alt='xArtistsLogo' className='w-64 h-64' />
         </div>
+        <div className='mt-4 text-white text-left'>
+              <h2>Stakeur:</h2>
+              <p>{stakedScriptOutput}</p> {/* Affichez la sortie du script staked.sh ici */}
+            </div>
       </div>
+
     </AuthRedirectWrapper>
   );
 }
